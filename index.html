@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stifler xatspace</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <aside class="profile-panel">
+      <div class="profile-photo">
+        <img src="profile.png" alt="Foto de perfil de Stifler">
+      </div>
+      
+      <div class="profile-copy">
+        <h1 class="page-title">Stifler</h1>
+        <p class="profile-subtitle">revendedor xat</p>
+        <div class="role-text">
+          <span class="typed-input">revendedor xat</span>
+        </div>
+        <div class="divider"></div>
+      </div>
+      <div class="profile-meta">
+        <span>Stif (344107857)</span>
+        <span>revendedor xat</span>
+      </div>
+      <section class="support-banner compact">
+        <p><b>Notes:</b></p>
+        <ul>
+          <li>IDs marked with * are auction IDs, which means those have never been registered.</li>
+          <li>Contact me by using the command: <strong>/344107857 Stifler</strong>.</li>
+          <li>If you don't find me, find a chat with a FEXBot and say: "!mail Stif message".</li>
+          <li>You can also contact me on the mobile app KIK, my nickname is "stifxat" or on Discord, my username is "urielneves".</li>
+          <li>If I'm online but not answering, use the chat group Stifler pc bot and command: <strong>!bump Stif</strong>.</li>
+        </ul>
+        <div class="links-row">
+          <a class="link-pill" href="https://wiki.xat.com/User:Stif" target="_blank" rel="noreferrer">WIKI</a>
+          <a class="link-pill" href="https://forum.xat.com/profile/538" target="_blank" rel="noreferrer">Forum</a>
+          <a class="link-pill" href="https://xat.com/Stifler" target="_blank" rel="noreferrer">Xat</a>
+        </div>
+      </section>
+      <div class="profile-footer">
+        <a class="link-pill muted" href="https://xat.me/Harryz" target="_blank" rel="noreferrer">Designer Harryz</a>
+      </div>
+    </aside>
+
+    <section class="main-panel">
+      <div class="hero-block">
+        <h2>Welcome to my xatspace!</h2>
+        <p>I sell xats, days, powers, short names and IDs. Use the listed contacts for orders and support.</p>
+      </div>
+
+      <article class="inventory-card">
+        <h3>Lista de itens</h3>
+        <div id="inventory-list" class="inventory-grid">
+          <!-- Inventory grouped sections são geradas pelo JavaScript aqui -->
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Digits modal (opens only via button; closes only with the X button) -->
+  <div id="digits-modal" class="digits-modal" aria-hidden="true">
+    <div class="digits-modal-window" role="dialog" aria-modal="true" aria-labelledby="digits-title">
+      <header class="digits-modal-header">
+        <h3 id="digits-title">9 & 10 digit IDs</h3>
+        <button id="digits-close" class="digits-close" aria-label="Close">✕</button>
+      </header>
+
+      <div id="digits-status" style="color:var(--muted);font-size:0.88rem;margin:8px 0 0 12px;"></div>
+
+      <div class="digits-modal-controls">
+        <label>
+          <input type="radio" name="digit-mode" value="9" checked>
+          9 digits
+        </label>
+        <label>
+          <input type="radio" name="digit-mode" value="10">
+          10 digits
+        </label>
+        <input id="digits-filter" type="text" placeholder="Filter by sequence" inputmode="numeric">
+      </div>
+
+      <div class="digits-modal-body">
+        <ul id="digits-list" class="digits-list"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+  <script>
+    // initialize typed effect for role text
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.Typed) {
+        const opts = {
+          strings: ['revendedor xat', 'dealer', 'distribuidor'],
+          typeSpeed: 70,
+          backSpeed: 55,
+          startDelay: 200,
+          backDelay: 1000,
+          smartBackspace: false,
+          loop: true,
+          showCursor: true,
+          cursorChar: '|'
+        };
+        try {
+          new Typed('.typed-input', opts);
+        } catch (e) {
+          // fallback: set static text
+          const el = document.querySelector('.typed-input');
+          if (el) el.textContent = 'revendedor xat';
+        }
+      }
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
